@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<ruleset name="Sanasport">
+    <rule ref="./ruleset-common.xml"/>
+</ruleset>
