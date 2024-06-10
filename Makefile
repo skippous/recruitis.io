@@ -53,6 +53,11 @@ phpstan:
 tests:
 	@bin/phpunit
 
+## webpack build dev
+.PHONY: build
+build:
+	@npm run dev
+
 ## Print this help
 .PHONY: help
 help:	all
