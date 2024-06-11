@@ -33,12 +33,12 @@ all:
 .PHONY: qa
 qa: cs phpstan tests
 
-## CodeSniffer - checks codestyle and typehints
+## CodeSniffer - check codestyle and typehints
 .PHONY: cs
 cs:
 	@vendor/bin/phpcs --cache=var/phpcs.cache --standard=qa/ruleset.xml --extensions=php --tab-width=4 -sp app tests
 
-## CodeSniffer - checks codestyle and typehints
+## CodeSniffer - fix codestyle and typehints
 .PHONY: cs-fix
 cs-fix:
 	@vendor/bin/phpcbf --standard=qa/ruleset.xml --extensions=php --tab-width=4 -sp app tests
