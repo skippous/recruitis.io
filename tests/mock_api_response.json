@@ -1,0 +1,113 @@
+{
+  "payload": [
+    {
+      "job_id": 431912,
+      "secured_id": "6D65xKemuldGqfr6xRMq1UtMcmNURQr3",
+      "draft": false,
+      "active": true,
+      "access_state": 1,
+      "public_id": null,
+      "title": "Manažer segmentu trhu ve Fiber tribu KLON LHO 17 (m\\z) test&test (m/z) test|@![]();test",
+      "description": "<p><strong>“Téčko” tedy T-Mobile a Slovak Telekom zahájilo agilní transformaci a vy se na ni můžete podílet s námi! Přidejte se k\\u{202F}nám a využijte jedinečn</strong></p>",
+      "internal_note|string": null,
+      "date_end": null,
+      "date_closed": null,
+      "closed_duration": null,
+      "date_created": "2023-06-30 09:28:00",
+      "date_created_origin": "2023-06-30 09:28:00",
+      "last_update": "2023-06-30 09:44:15",
+      "text_language": "cs",
+      "workfields": [
+        {"id": 1, "name": "Field 1"},
+        {"id": 2, "name": "Field 2"}
+      ],
+      "filterlist": [
+        {"id": 1, "name": "Filter 1"},
+        {"id": 2, "name": "Filter 2"},
+        {"id": 3, "name": "Filter 3"},
+        {"id": 4, "name": "Filter 4"}
+      ],
+      "education": [
+        {"id": -1, "name": "Vzdělání není podstatné"},
+        {"id": 2, "name": "Bachelor's Degree"}
+      ],
+      "disability": null,
+      "details": {
+        "office_id": 1,
+        "facebook_picture_path": null,
+        "opening_reason": null,
+        "remote_work": null,
+        "suitable_for": [
+          {"id": 1, "name": "Students"},
+          {"id": 2, "name": "Graduates"}
+        ],
+        "driving_license": ["B"]
+      },
+      "personalist": {
+        "id": 27015,
+        "name": "Aleš Bednář",
+        "initials": "AB"
+      },
+      "contact": {
+        "name": "Lukáš Hanko",
+        "initials": "LH",
+        "email": "mlynarcikova.simona@gmail.com",
+        "phone": null,
+        "employee": {
+          "id": 27050,
+          "name": "Lukáš",
+          "surname": "Hanko",
+          "initials": "LH",
+          "email": "lukas.hanko2@t-mobile.cz",
+          "photo_url": "https://app.recruitis.io/image/h/cExNTDJlTEFLSUlYR01haTgyZGlzemdEN3Y2RGU0b3NIbEJIKy9FMERrV0s5MlIwRTYveklGU1UxbTF0aCsreQ==?focus=center&imprint=c81dc2542c94fe772",
+          "phone": "+421 123 456 789",
+          "linkedin": "https://www.linkedin.com/in/lukashlukash/"
+        }
+      },
+      "sharing": [],
+      "addresses": [
+        {
+          "id": 1,
+          "office_id": 1,
+          "city": "Prague",
+          "postcode": "11000",
+          "street": "Street 1",
+          "region": "Region 1",
+          "state": "CZ",
+          "is_primary": true
+        }
+      ],
+      "employment": [
+        {"id": 1, "name": "Full-time"},
+        {"id": 2, "name": "Part-time"}
+      ],
+      "confidential": false,
+      "salary": {
+        "min": 0,
+        "max": 35709,
+        "currency": "CZK",
+        "unit": "month",
+        "visible": false,
+        "note": null,
+        "is_min_visible": false,
+        "is_max_visible": false,
+        "is_range": false
+      },
+      "salary_default_currency": "CZK",
+      "channels": [],
+      "edit_link": "https://app.recruitis.io/zadavatel/editor/create/id/431912",
+      "public_link": "https://jobs.recruitis.io/testovaciucetpr/431912-manazer-segmentu-trhu-ve-fiber-tribu-klon-lho-17-m-z-test-test-m-z-test-test",
+      "preview_url": "https://jobs.recruitis.io/testovaciucetpr/431912-manazer-segmentu-trhu-ve-fiber-tribu-klon-lho-17-m-z-test-test-m-z-test-test-6D65xKemuldGqfr6xRMq1UtMcmNURQr3",
+      "referrals": []
+    }
+  ],
+  "meta": {
+    "code": "api.found",
+    "duration": 140,
+    "message": "Jobs are returned.",
+    "entries_from": 1,
+    "entries_to": 10,
+    "entries_total": 62,
+    "entries_sum": 10
+  }
+}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Job Listings</h1>
+
+    {% if jobs is empty %}
+        <div class="alert alert-info">No job listings available at the moment.</div>
+    {% else %}
+        <div class="list-group">
+            {% for job in jobs %}
+                    <h5 class="mb-1">{{ job.title }}</h5>
+                    <small class="text-muted">{{ job.dateCreated|date('d.m.Y H:i:s') }}</small><br>
+                    {% if job.salary %}
+                    <small class="text-muted">Plat: {{ job.salary.min ~ ' - ' ~ job.salary.max ~ ' ' ~ job.salary.currency ~ ' per ' ~ job.salary.unit }}</small><br>
+                    {% endif %}
+
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if currentPage > 1 %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('job_list', {page: currentPage - 1}) }}">Previous</a>
+                    </li>
+                {% endif %}
+                {% for i in 1..totalPages %}
+                    <li class="page-item {% if i == currentPage %}active{% endif %}">
+                        <a class="page-link" href="{{ path('job_list', {page: i}) }}">{{ i }}</a>
+                    </li>
+                {% endfor %}
+                {% if currentPage < totalPages %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ path('job_list', {page: currentPage + 1}) }}">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+{% endblock %}
