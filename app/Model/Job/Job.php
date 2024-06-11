@@ -155,4 +155,55 @@ class Job
 		return $this->salary;
 	}
 
+	/** @return array<string, mixed> */
+	public function toArray(): array
+	{
+		return [
+			'jobId' => $this->getJobId(),
+			'securedId' => $this->getSecuredId(),
+			'publicId' => $this->getPublicId(),
+			'accessState' => $this->getAccessState(),
+			'draft' => $this->isDraft(),
+			'active' => $this->isActive(),
+			'title' => $this->getTitle(),
+			'description' => $this->getDescription(),
+			'dateEnd' => $this->getDateEnd() ? $this->getDateEnd()->format('Y-m-d H:i:s') : null,
+			'dateClosed' => $this->getDateClosed() ? $this->getDateClosed()->format('Y-m-d H:i:s') : null,
+			'dateCreated' => $this->getDateCreated() ? $this->getDateCreated()->format('Y-m-d H:i:s') : null,
+			'lastUpdate' => $this->getLastUpdate() ? $this->getLastUpdate()->format('Y-m-d H:i:s') : null,
+			'personalist' => [
+				'id' => $this->getPersonalist()->getId(),
+				'name' => $this->getPersonalist()->getName(),
+				'initials' => $this->getPersonalist()->getInitials(),
+			],
+			'contact' => [
+				'name' => $this->getContact()->getName(),
+				'initials' => $this->getContact()->getInitials(),
+				'email' => $this->getContact()->getEmail(),
+				'phone' => $this->getContact()->getPhone(),
+				'employee' => [
+					'id' => $this->getContact()->getEmployee()->getId(),
+					'name' => $this->getContact()->getEmployee()->getName(),
+					'surname' => $this->getContact()->getEmployee()->getSurname(),
+					'initials' => $this->getContact()->getEmployee()->getInitials(),
+					'email' => $this->getContact()->getEmployee()->getEmail(),
+					'photoUrl' => $this->getContact()->getEmployee()->getPhotoUrl(),
+					'phone' => $this->getContact()->getEmployee()->getPhone(),
+					'linkedin' => $this->getContact()->getEmployee()->getLinkedin(),
+				],
+			],
+			'salary' => $this->getSalary() ? [
+				'min' => $this->getSalary()->getMin(),
+				'max' => $this->getSalary()->getMax(),
+				'currency' => $this->getSalary()->getCurrency(),
+				'unit' => $this->getSalary()->getUnit(),
+				'visible' => $this->getSalary()->isVisible(),
+				'note' => $this->getSalary()->getNote(),
+				'isMinVisible' => $this->getSalary()->isMinVisible(),
+				'isMaxVisible' => $this->getSalary()->isMaxVisible(),
+				'isRange' => $this->getSalary()->isRange(),
+			] : null,
+		];
+	}
+
 }

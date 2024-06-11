@@ -15,6 +15,8 @@ Encore
         useBuiltIns: 'usage',
         corejs: 3
     })
+    // Allow Vue.js single file components
+    .enableVueLoader()
     .enableSassLoader()
     .enablePostCssLoader()
 ;
